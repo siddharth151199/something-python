@@ -36,11 +36,22 @@ class ListNode(Node):
 			ptr = ptr.next
 			
 		preptr.next = NewNode
-			
+		
+	
+      #function to delete at the end
+	def delete__node__end(self, delval=None, ptr=None,preptr=None):
+                ptr=self.head
+                while ptr.next is not None:
+                        preptr=ptr
+                        ptr=ptr.next
+
+                delval=preptr.next
+                preptr.next=None
+                print("deleted ENDvalue is"+delval)
 		
 list = ListNode()
 while True:
-	print("1.Insertbegenning\n2.InsertEnd\n3.PrintList\n4.Exit")
+	print("1.Insertbegenning\n2.InsertEnd\n3.PrintList\n4.delete end\n5.Exit")
 	choice = int(input("Enter your choice as number: "))
 	if choice == 1:
 		list.insert_node_begenning()
@@ -49,6 +60,8 @@ while True:
 	elif choice == 3:
 		list.print_list()
 	elif choice == 4:
+		list.delete__node__end()
+	elif choice == 5:
 		exit(0)
 	
 		
