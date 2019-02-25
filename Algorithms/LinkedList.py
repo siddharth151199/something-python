@@ -65,6 +65,8 @@ while True:
         list.print_list()
     elif choice == 6:
         exit(0)
+    else:
+	print("Error : Enter a valid choice!")
 	
 		
 	
