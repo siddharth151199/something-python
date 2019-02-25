@@ -36,20 +36,37 @@ class ListNode(Node):
 			ptr = ptr.next
 			
 		preptr.next = NewNode
-			
+		
+        #Function to delete at the beginning
+        def delete_node_beginning(self):
+                ptr = self.head
+                self.head = ptr.next
+                ptr = None		
+		
+		
+ 	#Function to delete at the end
+	#def delete_node_end(self):
+		
+		
 		
 list = ListNode()
 while True:
-	print("1.Insertbegenning\n2.InsertEnd\n3.PrintList\n4.Exit")
-	choice = int(input("Enter your choice as number: "))
-	if choice == 1:
-		list.insert_node_begenning()
-	elif choice == 2:
-		list.insert_node_end()
-	elif choice == 3:
-		list.print_list()
-	elif choice == 4:
-		exit(0)
+    print("1.Insertbegenning\n2.InsertEnd\n3.Delete Beginning\n4.Delete End\n5.PrintList\n6.Exit")
+    choice = int(input("Enter your choice as number: "))
+    if choice == 1:
+        list.insert_node_begenning()
+    elif choice == 2:
+        list.insert_node_end()
+    elif choice == 3:
+        list.delete_node_beginning()
+    elif choice == 4:
+        list.delete_node_end()
+    elif choice == 5:
+        list.print_list()
+    elif choice == 6:
+        exit(0)
+    else:
+	print("Error : Enter a valid choice!")
 	
 		
 	
