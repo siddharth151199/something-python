@@ -56,10 +56,8 @@ class ListNode(Node):
 
             delval=preptr.next
             preptr.next=None
-        
-                
             
-        
+            
 list = ListNode()
 while True:
     print("1.Insertbegenning\n2.InsertEnd\n3.Delete Beginning\n4.Delete End\n5.PrintList\n6.Exit")
@@ -77,5 +75,4 @@ while True:
     elif choice == 6:
         exit(0)
 
-		
 	
